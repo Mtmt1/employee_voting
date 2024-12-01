@@ -5,7 +5,6 @@ require_once 'models/Vote.php';
 $database = new Database();
 $db = $database->getConnection();
 
-// Get winners for each category
 $categoryWinners = $db->query("
     WITH RankedNominees AS (
         SELECT 
@@ -26,7 +25,6 @@ $categoryWinners = $db->query("
     ORDER BY category_name
 ")->fetchAll(PDO::FETCH_ASSOC);
 
-// Get most active voters
 $activeVoters = $db->query("
     SELECT 
         e.name,

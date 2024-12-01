@@ -2,29 +2,17 @@
 
 A simple web application that allows employees to vote for their colleagues in different categories and view voting results.
 
-## Features
-- Submit votes for colleagues in various categories
-- View category winners
-- Track most active voters
-- Prevent self-nomination
-- Dark theme UI
-
-## Prerequisites
+## Needed software
 - XAMPP (with Apache and MySQL)
-- PHP 7.4 or higher
-- Web browser
+- PHP 8.4.1
 
 ## Installation
 
 1. **Install XAMPP**
    - Download and install XAMPP from [https://www.apachefriends.org/](https://www.apachefriends.org/)
-   - Make sure Apache and MySQL services are installed
+   - Make sure Apache and MySQL services are installed thorugh XAMPP Control Panel
 
 2. **Clone the Repository**
-   ```bash
-   cd C:/xampp/htdocs
-   git clone https://github.com/yourusername/employee_voting.git
-   ```
 
 3. **Set Up the Database**
    - Start Apache and MySQL services from XAMPP Control Panel
@@ -37,7 +25,7 @@ A simple web application that allows employees to vote for their colleagues in d
 
 4. **Configure Database Connection**
    - Open `config/Database.php`
-   - Update the database credentials if needed (default values should work with XAMPP):
+   - (Optional)Update the database credentials if needed (default values should work with XAMPP):
      ```php
      private $host = "localhost";
      private $db_name = "employee_voting";
